@@ -2,16 +2,16 @@
 
 ![Intro](/corCTF-2021/web-devme/screenshots/siteintro.PNG)
 
-![User Input](/screenshots/userinput.PNG)
+![User Input](/corCTF-2021/web-devme/screenshots/userinput.PNG)
 
-![Find Graphql](/screenshots/burpfindgraphql.PNG)
+![Find Graphql](/corCTF-2021/web-devme/screenshots/burpfindgraphql.PNG)
 
-![Introspection](/screenshots/introspection1.PNG)
+![Introspection](/corCTF-2021/web-devme/screenshots/introspection1.PNG)
 
-![Query types](/screenshots/query_query_types.PNG)
+![Query types](/corCTF-2021/web-devme/screenshots/query_query_types.PNG)
 
-![Token_Required](/screenshots/flag_requires_token.PNG)
+![Token_Required](/corCTF-2021/web-devme/screenshots/flag_requires_token.PNG)
 
-![Token](/screenshots/query_query_types.PNG)
+![Token](/corCTF-2021/web-devme/screenshots/query_token.PNG)
 
-![Flag](/screenshots/foundflag.PNG)
+![Flag](/corCTF-2021/web-devme/screenshots/foundflag.PNG)
