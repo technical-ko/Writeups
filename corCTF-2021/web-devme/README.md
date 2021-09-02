@@ -12,6 +12,6 @@
 
 ![Token_Required](/corCTF-2021/web-devme/screenshots/flag_requires_token.PNG)
 
-![Token](/corCTF-2021/web-devme/screenshots/query_query_types.PNG)
+![Token](/corCTF-2021/web-devme/screenshots/query_token.PNG)
 
 ![Flag](/corCTF-2021/web-devme/screenshots/foundflag.PNG)
