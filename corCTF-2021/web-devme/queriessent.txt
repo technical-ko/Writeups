@@ -1,0 +1,35 @@
+{
+  __schema {
+    types {
+      name
+    }
+  }
+}
+
+
+{
+  __schema {
+    queryType {
+      fields {
+        name
+        description
+      }
+    }
+  }
+}
+
+
+{
+  users {
+    token
+  }
+}
+
+
+
+
+{
+  flag(token:"123")
+}
+
+
