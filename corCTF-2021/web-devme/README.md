@@ -1,6 +1,6 @@
 # web-devme Writeup
 
-![Intro](/screenshots/siteintro.PNG)
+![Intro](/corCTF-2021/web-devme/screenshots/siteintro.PNG)
 
 ![User Input](/screenshots/userinput.PNG)
 
