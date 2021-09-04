@@ -11,8 +11,7 @@ https://devme.be.ax
 ##Task Analysis
 The link given in the description presents us with the following webpage:
 
-![Intro](/corCTF-2021/web-devme/screenshots/siteintro.PNG width="300")
-<img src="https://corCTF-2021/web-devme/screenshots/siteintro.PNG" width="100" height="100">
+![Intro](/corCTF-2021/web-devme/screenshots/siteintro.PNG)
 
 The two buttons that are immediately present do not appear to do anything useful for us, as the "Buy for $20" button simply redirects us to the same page, and the "Learn more" button simply scrolls the page down. Upon scrolling downward, however, we can see a field for user input that requires further investigation: 
 
