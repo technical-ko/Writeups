@@ -13,11 +13,16 @@ The link given in the description presents us with the following webpage:
 
 ![Intro](/corCTF-2021/web-devme/screenshots/siteintro.PNG)
 
-The two buttons that are immediately present do not appear to do anything useful for us, as the "Buy for $20" button simply redirects us to the same page, and the "Learn more" button simply scrolls the page down. Upon scrolling downward, however, we can see a field for user input that requires further investigation: 
+The two buttons that are immediately present did not appear to do anything useful for us, as the "Buy for $20" button simply redirected us to the same page, and the "Learn more" button simply scrolled the page down. Upon scrolling downward, however, we found a field for user input that required further investigation: 
 
 ![User Input](/corCTF-2021/web-devme/screenshots/userinput.PNG)
 
+Examining the request sent when using the "Submit email" button showed that the endpoint is using Graphql:
+
 ![Find Graphql](/corCTF-2021/web-devme/screenshots/burpfindgraphql.PNG)
+
+We checked to see if there were 
+Graphql supports introspection, which 
 
 ![Introspection](/corCTF-2021/web-devme/screenshots/introspection1.PNG)
 
