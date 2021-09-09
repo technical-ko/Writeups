@@ -34,7 +34,7 @@ The fact that introspection was turned on allowed me to gather information about
 
 ![Query types](/corCTF-2021/web-devme/screenshots/query_query_types.PNG)
 
-Here I found that there are two types of queries that have been defined for this database. The one named "flag" of course stood out.
+Above I found that there are two types of queries that have been defined for this database. The one named "flag" of course stood out, so I tried using it:
 
 ![Token_Required](/corCTF-2021/web-devme/screenshots/flag_requires_token.PNG)
 
