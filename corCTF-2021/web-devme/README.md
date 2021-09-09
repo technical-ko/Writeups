@@ -18,7 +18,7 @@ The two buttons that are immediately present did not appear to do anything usefu
 ![User Input](/corCTF-2021/web-devme/screenshots/userinput.PNG)
 
 
-## Solution:
+## Solution
 Examining the request sent when clicking the "Submit email" button using Burp showed that the endpoint is using GraphQL:
 
 ![Find Graphql](/corCTF-2021/web-devme/screenshots/burpfindgraphql.PNG)
