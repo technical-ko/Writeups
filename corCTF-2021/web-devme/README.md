@@ -13,7 +13,7 @@ The link given in the description presents us with the following webpage:
 
 ![Intro](/corCTF-2021/web-devme/screenshots/siteintro.PNG)
 
-The two buttons that are immediately present did not appear to do anything useful, as the "Buy for $20" button simply redirected us to the same page, and the "Learn more" button simply scrolled the page down. Upon scrolling downward, however, I found a field for user input that required further investigation: 
+The two buttons that are immediately present did not appear to do anything useful, as the "Buy for $20" button simply redirected us to the same page, and the "Learn more" button simply scrolled the page down. Upon scrolling downward, however, I found a field for user input that required further investigation. It seemed very likely that for this task we would need to determine what was being used to store this user input and to find the flag by finding a vulnerability and exploiting it. 
 
 ![User Input](/corCTF-2021/web-devme/screenshots/userinput.PNG)
 
@@ -22,9 +22,9 @@ The two buttons that are immediately present did not appear to do anything usefu
 Examining the request sent when clicking the "Submit email" button using Burp showed that the endpoint is using GraphQL:
 
 ![Find Graphql](/corCTF-2021/web-devme/screenshots/burpfindgraphql.PNG)
-
-GraphiQL is a simple program for writing and sending GraphQL queries.
+ 
 We used it here to test to see if introspection has been turned off in the with the following query:
+I tried out GraphiQL, as it was recommended as a simple program for writing and sending GraphQL queries. However, one could just as easily create their own query string or JSON object and send it via POST in the manner described [here](https://dgraph.io/docs/graphql/api/requests/).
 
 ![Introspection](/corCTF-2021/web-devme/screenshots/introspection1.PNG)
 
