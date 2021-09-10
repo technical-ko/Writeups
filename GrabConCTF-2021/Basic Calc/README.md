@@ -19,7 +19,7 @@ Users are presented with a field designed to serve as a calculator, and immediat
 
 # Solution
 
-After briefly researching the topic I used a modified version of a [python script](https://ironhackers.es/en/tutoriales/saltandose-waf-ejecucion-de-codigo-php-sin-letras/) from a writeup for a previous CTF that bypasses a very similar WAF:
+After briefly researching the topic I used a modified version of a python script from a [writeup for a previous CTF](https://ironhackers.es/en/tutoriales/saltandose-waf-ejecucion-de-codigo-php-sin-letras/) that bypasses a very similar WAF:
 
 ```
 import requests
