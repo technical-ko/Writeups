@@ -96,19 +96,19 @@ I executed the script with "phpinfo()" encoded as the payload and achieved the f
 
 Receiving the desired output of phpinfo() determined that the bypass was working. I executed the script with "print_r(scandir(/var/www/html/))" as the payload to print out the current directory's contents:
 
-![scandir](/GrabConCTF-2021/Basic Calc/screenshots/scandir.PNG)
+![scandir](/GrabConCTF-2021/Basic%20Calc/screenshots/scandir.PNG)
 
 I repeated running the script using "show_source(12.php)" to retrieve the contents of the file (the same was done for file.txt but it was empty of meaningful content):
 
-![show_source](/GrabConCTF-2021/Basic Calc/screenshots/show_source.PNG)
+![show_source](/GrabConCTF-2021/Basic%20Calc/screenshots/show_source.PNG)
 
 Upon rendering the response to make it more readable, I had:
 
-![rendered_response](/GrabConCTF-2021/Basic Calc/screenshots/rendered_response.PNG)
+![rendered_response](/GrabConCTF-2021/Basic%20Calc/screenshots/rendered_response.PNG)
 
 This file gave me an endpoint that could execute whatever bash commands I wanted to send to it using a GET request, which would allow me to navigate the file system much more easily. So I used the Burp decoder tool to URL encode the following:
 
-![burp_encode_find](/GrabConCTF-2021/Basic Calc/screenshots/burp_encode_find_flag.PNG)
+![burp_encode_find](/GrabConCTF-2021/Basic%20Calc/screenshots/burp_encode_find_flag.PNG)
 
 And sent it to the endpoint:
 ```
