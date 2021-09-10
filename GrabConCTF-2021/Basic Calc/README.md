@@ -92,7 +92,7 @@ print("[+] Sending payload {}".format(payload))
 
 I executed the script with "phpinfo()" encoded as the payload and achieved the following output:
 
-![working_bypass](/GrabConCTF-2021/Basic Calc/screenshots/phpinfo.PNG)
+![working_bypass](/GrabConCTF-2021/Basic%20Calc/screenshots/phpinfo.PNG)
 
 Receiving the desired output of phpinfo() determined that the bypass was working. I executed the script with "print_r(scandir(/var/www/html/))" as the payload to print out the current directory's contents:
 
