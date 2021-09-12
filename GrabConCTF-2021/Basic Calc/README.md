@@ -106,7 +106,7 @@ Upon rendering the response to make it more readable, I had:
 
 ![rendered_response](/GrabConCTF-2021/Basic%20Calc/screenshots/rendered_response.PNG)
 
-This file gave me an endpoint that would execute whatever bash commands I wanted to send to it using a GET request without having to bypass a WAF, allowing me to navigate the file system a little more easily. So I used the Burp decoder tool to URL encode the following:
+This file gave me an endpoint that would execute whatever bash commands I wanted to send to it by including a GET parameter, allowing me to navigate the file system a little more easily. So I used the Burp decoder tool to URL encode the following:
 
 ![burp_encode_find](/GrabConCTF-2021/Basic%20Calc/screenshots/burp_encode_find_flag.PNG)
 
