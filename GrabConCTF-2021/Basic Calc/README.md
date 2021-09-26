@@ -13,7 +13,7 @@ Author: karma
 
 Following the link brought me to the following webpage:
 
-![Intro](/GrabConCTF-2021/Basic Calc/screenshots/intro.PNG)
+![Intro](/GrabConCTF-2021/Basic%20Calc/screenshots/intro.PNG)
 
 Users are presented with a field designed to serve as a calculator, and immediately below it the unrendered html and php for the page. This made it clear that the field was protected by a WAF designed to disallow any upper or lower case letters as well as the "`" character within the submitted string. Any input that makes it past the WAF is passed to the eval() function. Our task, then, was to bypass this WAF and exploit the use of eval() to execute our own php code and find the flag.
 
