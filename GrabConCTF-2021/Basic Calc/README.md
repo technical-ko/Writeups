@@ -11,7 +11,7 @@ Author: karma
 
 ## Task Analysis
 
-Following the link brought me to the following webpage:
+Following the link brought me to the following beautiful webpage:
 
 ![Intro](/GrabConCTF-2021/Basic%20Calc/screenshots/intro.PNG)
 
