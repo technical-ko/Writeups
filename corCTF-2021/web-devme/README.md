@@ -1,4 +1,4 @@
-# web-devme (web, 323pts, 264 solved)
+# web-devme
 
 ## Description
 
