@@ -121,10 +121,11 @@ print(response.status_code, response.reason)
 print(response.content.decode())
 ```
 I recieved the following output:
+
 ![find_output](/GrabConCTF-2021/Basic%20Calc/screenshots/find_flag_output.PNG)
 
 I repeated the above for "cat /flagggg.txt", and received:
 
-![flag](/GrabConCTF-2021/Basic%20Calc/the_flag.PNG)
+![flag](/GrabConCTF-2021/Basic%20Calc/screenshots/the_flag.PNG)
 
 And I found the flag: "GrabCON{b4by_php_f0r_y0u}"
