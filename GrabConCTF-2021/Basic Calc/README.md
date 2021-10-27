@@ -57,7 +57,7 @@ print(response.status_code, response.reason)
 print(response.content.decode())
 ```
 
-The script first creates a set of "valid" (i.e. will not trigger the WAF) printable characters. Each character in the "expected" string (the string we would like to be executed by eval()) is masked with a valid character from this set so that the result is another valid character. The masked characters (word1 below) and the valid characters used for the mask (word2 below) are then returned:  
+The script first creates a set of "valid" (i.e. will not trigger the WAF) printable characters. Each character in the "expected" string (the string we would like to be executed by eval()) is XOR masked with a valid character from this set so that the result is another valid character. The masked characters (word1 below) and the valid characters used for the mask (word2 below) are then returned:  
 
 ```
 def get_xor_strings(expected, valids):
