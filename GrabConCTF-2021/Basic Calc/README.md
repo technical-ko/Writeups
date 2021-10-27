@@ -11,15 +11,15 @@ Author: karma
 
 ## Task Analysis
 
-Following the link brought me to the following webpage:
+Following the link brought me to the following beautiful webpage:
 
-![Intro](/GrabConCTF-2021/Basic Calc/screenshots/intro.PNG)
+![Intro](/GrabConCTF-2021/Basic%20Calc/screenshots/intro.PNG)
 
 Users are presented with a field designed to serve as a calculator, and immediately below it the unrendered html and php for the page. This made it clear that the field was protected by a WAF designed to disallow any upper or lower case letters as well as the "`" character within the submitted string. Any input that makes it past the WAF is passed to the eval() function. Our task, then, was to bypass this WAF and exploit the use of eval() to execute our own php code and find the flag.
 
 # Solution
 
-After briefly researching the topic I used a modified version of a [python script](https://ironhackers.es/en/tutoriales/saltandose-waf-ejecucion-de-codigo-php-sin-letras/) from a writeup for a previous CTF that bypasses a very similar WAF:
+After briefly researching the topic I used a modified version of a python script from a [writeup for a previous CTF](https://ironhackers.es/en/tutoriales/saltandose-waf-ejecucion-de-codigo-php-sin-letras/) that bypasses a very similar WAF:
 
 ```
 import requests
@@ -57,7 +57,7 @@ print(response.status_code, response.reason)
 print(response.content.decode())
 ```
 
-The script first creates a set of "valid" (i.e. will not trigger the WAF) printable characters. Each character in the "expected" string (the string we would like to be executed by eval()) is masked with a valid character so that the result is another valid character. The masked characters (word1 below) and the valid characters used for the mask (word2 below) are then returned:  
+The script first creates a set of "valid" (i.e. will not trigger the WAF) printable characters. Each character in the "expected" string (the string we would like to be executed by eval()) is XOR masked with a valid character from this set so that the result is another valid character. The masked characters (word1 below) and the valid characters used for the mask (word2 below) are then returned:  
 
 ```
 def get_xor_strings(expected, valids):
@@ -92,23 +92,23 @@ print("[+] Sending payload {}".format(payload))
 
 I executed the script with "phpinfo()" encoded as the payload and achieved the following output:
 
-![working_bypass](/GrabConCTF-2021/Basic Calc/screenshots/phpinfo.PNG)
+![working_bypass](/GrabConCTF-2021/Basic%20Calc/screenshots/phpinfo.PNG)
 
 Receiving the desired output of phpinfo() determined that the bypass was working. I executed the script with "print_r(scandir(/var/www/html/))" as the payload to print out the current directory's contents:
 
-![scandir](/GrabConCTF-2021/Basic Calc/screenshots/scandir.PNG)
+![scandir](/GrabConCTF-2021/Basic%20Calc/screenshots/scandir.PNG)
 
 I repeated running the script using "show_source(12.php)" to retrieve the contents of the file (the same was done for file.txt but it was empty of meaningful content):
 
-![show_source](/GrabConCTF-2021/Basic Calc/screenshots/show_source.PNG)
+![show_source](/GrabConCTF-2021/Basic%20Calc/screenshots/show_source.PNG)
 
 Upon rendering the response to make it more readable, I had:
 
-![rendered_response](/GrabConCTF-2021/Basic Calc/screenshots/rendered_response.PNG)
+![rendered_response](/GrabConCTF-2021/Basic%20Calc/screenshots/rendered_response.PNG)
 
-This file gave me an endpoint that could execute whatever bash commands I wanted to send to it using a GET request, which would allow me to navigate the file system much more easily. So I used the Burp decoder tool to URL encode the following:
+This file gave me an endpoint that would execute whatever bash commands I wanted to send to it by including a GET parameter, allowing me to navigate the file system a little more easily. So I used the Burp decoder tool to URL encode the following:
 
-![burp_encode_find](/GrabConCTF-2021/Basic Calc/screenshots/burp_encode_find_flag.PNG)
+![burp_encode_find](/GrabConCTF-2021/Basic%20Calc/screenshots/burp_encode_find_flag.PNG)
 
 And sent it to the endpoint:
 ```
@@ -121,10 +121,11 @@ print(response.status_code, response.reason)
 print(response.content.decode())
 ```
 I recieved the following output:
-![find_output](/GrabConCTF-2021/Basic Calc/screenshots/find_flag_output.PNG)
+
+![find_output](/GrabConCTF-2021/Basic%20Calc/screenshots/find_flag_output.PNG)
 
 I repeated the above for "cat /flagggg.txt", and received:
 
-![flag](/GrabConCTF-2021/Basic Calc/the_flag.PNG)
+![flag](/GrabConCTF-2021/Basic%20Calc/screenshots/the_flag.PNG)
 
 And I found the flag: "GrabCON{b4by_php_f0r_y0u}"
