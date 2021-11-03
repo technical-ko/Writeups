@@ -46,8 +46,7 @@ Our goals from here were to:
 ## Solution
 
 # WAF Bypass
-I found *this* guide very useful in helping me construct the following WAF bypass. 
-I found that The WAF was designed to only check the contents of the "value" GET parameter. Extra paremters went unchecked, so blacklisted keywords could be included in them and then accessed as strings via the request.args object. These strings could then be passed to the ![built-in Jinja filter](https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.attr) ```attr()```. The documentation tells us that ```attr()``` takes a string as an argument to "Get an attribute of an object. foo|attr("bar") works like foo.bar just that always an attribute is returned and items are not looked up..."
+I found that The WAF was designed to only check the contents of the "value" GET parameter. Extra paremters went unchecked, so blacklisted keywords could be included in them and then accessed as strings via the request.args object. These strings could then be passed to the [built-in Jinja filter](https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.attr) ```attr()```. The documentation tells us that ```attr()``` takes a string as an argument to "Get an attribute of an object. foo|attr("bar") works like foo.bar just that always an attribute is returned and items are not looked up..."
 Using these features I could bypass the filter using urls constructed with additional get parameters like the following:
 
 ```
