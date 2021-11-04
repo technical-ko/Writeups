@@ -69,7 +69,7 @@ The above produced the following output:
 
 ![ls_output](/CSAW-2021/web-ninja/screenshots/ls_output.PNG)
 
-# Found flag
+# Read flag
 I now knew that the flag was located in the same directory as the site's application script. This meant I could access the flag with the same technique by invoking the "cat" command:
 
 ```
