@@ -23,8 +23,8 @@ Examining the request sent when clicking the "Submit email" button using Burp sh
 
 ![Find Graphql](/corCTF-2021/web-devme/screenshots/burpfindgraphql.PNG)
  
-I tested to see if introspection had been turned off with the following query:
 I tried out GraphiQL, as it was recommended as a simple program for writing and sending GraphQL queries. However, one could just as easily create their own query string or JSON object and send it via POST in the manner described [here](https://dgraph.io/docs/graphql/api/requests/).
+I tested to see if introspection had been turned off with the following query:
 
 ![Introspection](/corCTF-2021/web-devme/screenshots/introspection1.PNG)
 
