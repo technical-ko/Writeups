@@ -18,7 +18,7 @@ The link given in the description presents us with the following webpage where t
 
 When input is submitted, the page displays "Hello " followed by whatever was typed into the submission field.
 
-I confirmed that xss injection was possible. However, this was not helpful to me since the site would not present our malicious scripts to anyone but ourselves. Switching gears, I used Burp to find that the site was built using Python 2.7, and I noted that the challenge's name, "Ninja" could potentially be hinting at the "Jinja" framework. I submitted the following to check for a SSTI vulnerability:
+I confirmed that xss injection was possible. However, this was not helpful to me since the site would not present our malicious scripts to anyone but ourselves. Switching gears, I used Wappalyzer to find that the site was built using Python 2.7, and I noted that the challenge's name, "Ninja" could potentially be hinting at the "Jinja" framework. I submitted the following to check for a SSTI vulnerability:
 ```
 {{}}
 ```
